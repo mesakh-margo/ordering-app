@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <header class="container">
+                <img src="images/hero.png" class="hero-image">
+                <div class="hero">
+                    <h1>Jimmy's Diner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>
+            </header>
+
+            <section class="container" id="menu-section"></section>
+
+            <section class="container" id="order-section"></section>
+        </div>
+
+        <div class="modal" id="payment-modal">
+            <div class="modal-inner">
+                <h2>Enter card details</h2>
+                
+                <form id="payment-form" novalidate>
+                    <div class="field">
+                        <label for="card-number">
+                            <span>Card Number</span>
+                            <input
+                                id="card-number"
+                                type="text"
+                                inputmode="numeric"
+                                pattern="[0-9\s]{13,19}"
+                                autocomplete="cc-number"
+                                placeholder="4242 4242 4242 4242"
+                                maxlength="19"
+                                required
+                                autofocus
+                            />
+                        </label>
+                        <!-- <div class="error-message"></div> -->
+                    </div>
+                    
+                    <div class="field">
+                        <label for="card-name">
+                            <span>Name on Card</span>
+                            <input
+                                id="card-name"
+                                type="text"
+                                autocomplete="cc-name"
+                                placeholder="John Doe"
+                                required
+                            />
+                        </label>
+                        <!-- <div class="error-message"></div> -->
+                    </div>
+                    
+                    <div class="expiry-cvv">
+                        <div class="field">
+                            <label for="card-expiry">
+                                <span>Expiry Date</span>
+                                <input
+                                    id="card-expiry"
+                                    type="text"
+                                    inputmode="numeric"
+                                    pattern="(0[1-9]|1[0-2])\/?([0-9]{2})"
+                                    autocomplete="cc-exp"
+                                    placeholder="MM/YY"
+                                    maxlength="5"
+                                    required
+                                />
+                            </label>
+                            <!-- <div class="error-message"></div> -->
+                        </div>
+                        <div class="field">
+                            <label for="card-cvc">
+                                <span>CVV</span>
+                                <input
+                                    id="card-cvc"
+                                    type="text"
+                                    inputmode="numeric"
+                                    pattern="[0-9]{3,4}"
+                                    autocomplete="cc-csc"
+                                    placeholder="123"
+                                    maxlength="4"
+                                    required
+                                />
+                            </label>
+                            <!-- <div class="error-message"></div> -->
+                        </div>
+                    </div>
+                    <button type="submit" class="payment-btn">Pay</button>
+                </form>
+            </div>
+        </div>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
+ 
