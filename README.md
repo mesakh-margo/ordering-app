@@ -1,4 +1,4 @@
-[Project URL](orderdiner.netlify.app)
+[Project URL](https://orderdiner.netlify.app/)
 
 # Getting Started
 Install the dependencies and run the project
